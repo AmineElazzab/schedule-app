@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add this to your CSS file or Tailwind configuration */
+.shift-small {
+  font-size: 0.75rem; /* Smaller font size */
+  padding: 0.5rem;    /* Smaller padding */
+}
+
