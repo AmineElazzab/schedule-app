@@ -7,6 +7,7 @@ export interface Shift {
 export interface Staff {
   name: string;
   hours: number;
+  avatar: string;  // Added avatar property
   shifts: { [date: string]: Shift[] };
 }
 
@@ -25,162 +26,221 @@ export const schedules: Schedule[] = [
   { date: "Sun 27", events: [] },
 ];
 
-// export const kitchenStaff: Staff[] = [
-//   {
-//     name: "Amanda Johnson",
-//     hours: 32,
-//     shifts: {
-//       "Mon 21": [
-//         { role: "Sous-chef", time: "9:00 - 5:00 p", color: "bg-purple-200" },
-//       ],
-//       "Tue 22": [
-//         { role: "Sous-chef", time: "9:00 - 5:00 p", color: "bg-purple-200" },
-//       ],
-//       "Wed 23": [
-//         { role: "Sous-chef", time: "9:00 - 5:00 p", color: "bg-purple-200" },
-//       ],
-//       "Thu 24": [
-//         { role: "Sous-chef", time: "9:00 - 5:00 p", color: "bg-purple-200" },
-//       ],
-//     },
-//   },
-//   {
-//     name: "Ella Harper",
-//     hours: 24,
-//     shifts: {
-//       "Mon 21": [{ role: "Chef", time: "9:00 - 5:00 p", color: "bg-blue-200" }],
-//       "Tue 22": [{ role: "Chef", time: "9:00 - 5:00 p", color: "bg-blue-200" }],
-//       "Wed 23": [{ role: "Chef", time: "9:00 - 5:00 p", color: "bg-blue-200" }],
-//       "Thu 24": [
-//         { role: "Chef", time: "9:00 - 12:00 p", color: "bg-blue-200" },
-//         { role: "Assistant", time: "2:00 - 10:00 p", color: "bg-red-200" },
-//       ],
-//     },
-//   },
-//   {
-//     name: "Mitchel Flynn",
-//     hours: 32,
-//     shifts: {
-//       "Mon 21": [{ role: "Cook", time: "9:00 - 5:00 p", color: "bg-pink-200" }],
-//       "Tue 22": [{ role: "Cook", time: "9:00 - 5:00 p", color: "bg-pink-200" }],
-//       "Wed 23": [{ role: "Cook", time: "9:00 - 5:00 p", color: "bg-pink-200" }],
-//       "Thu 24": [{ role: "Cook", time: "9:00 - 5:00 p", color: "bg-pink-200" }],
-//     },
-//   },
-// ];
-
 export const Staffs: Staff[] = [
   {
     name: "Amelia Reyes",
     hours: 32,
+    avatar: "https://cdn-icons-png.flaticon.com/256/147/147144.png", // Added avatar URL
     shifts: {
       "Mon 21": [
-        { role: "Waiter", time: "9:00 - 5:00 p", color: "bg-green-200" },
+        {
+          role: "Waiter",
+          time: "9:00 - 5:00",
+          color:
+            "bg-green-200 text-green-600  ",
+        },
       ],
       "Tue 22": [
-        { role: "Waiter", time: "9:00 - 5:00 p", color: "bg-green-200" },
+        {
+          role: "Waiter",
+          time: "9:00 - 5:00 ",
+          color: "bg-green-200 text-green-600",
+        },
       ],
       "Wed 23": [
-        { role: "Waiter", time: "9:00 - 5:00 p", color: "bg-green-200" },
+        {
+          role: "Waiter",
+          time: "9:00 - 5:00 ",
+          color: "bg-green-200 text-green-600",
+        },
       ],
       "Thu 24": [
-        { role: "Waiter", time: "9:00 - 5:00 p", color: "bg-green-200" },
+        {
+          role: "Waiter",
+          time: "9:00 - 5:00 ",
+          color: "bg-green-200 text-green-600",
+        },
       ],
     },
   },
   {
     name: "Danny Hansen",
     hours: 24,
+    avatar: "https://cdn-icons-png.flaticon.com/256/147/147144.png", // Added avatar URL
     shifts: {
       "Mon 21": [
-        { role: "Hostess", time: "9:00 - 5:00 p", color: "bg-red-200" },
+        {
+          role: "Hostess",
+          time: "9:00 - 5:00 ",
+          color: "bg-red-200 text-red-600",
+        },
       ],
       "Tue 22": [
-        { role: "Hostess", time: "9:00 - 5:00 p", color: "bg-red-200" },
+        {
+          role: "Hostess",
+          time: "9:00 - 5:00 ",
+          color: "bg-red-200 text-red-600",
+        },
       ],
       "Wed 23": [
-        { role: "Hostess", time: "9:00 - 5:00 p", color: "bg-red-200" },
+        {
+          role: "Hostess",
+          time: "9:00 - 5:00 ",
+          color: "bg-red-200 text-red-600",
+        },
       ],
       "Thu 24": [
-        { role: "Hostess", time: "9:00 - 5:00 p", color: "bg-red-200" },
+        {
+          role: "Hostess",
+          time: "9:00 - 5:00 ",
+          color: "bg-red-200 text-red-600",
+        },
       ],
     },
   },
   {
-    name: "Samanta Atherton",
+    name: "Samanta",
     hours: 16,
+    avatar: "https://cdn-icons-png.flaticon.com/256/147/147144.png", // Added avatar URL
     shifts: {
       "Mon 21": [
-        { role: "Bartender", time: "9:00 - 5:00 p", color: "bg-blue-300" },
+        {
+          role: "Bartender",
+          time: "9:00 - 5:00 ",
+          color: "bg-blue-300 text-blue-600",
+        },
       ],
       "Tue 22": [
-        { role: "Bartender", time: "9:00 - 5:00 p", color: "bg-blue-300" },
+        {
+          role: "Bartender",
+          time: "9:00 - 5:00 ",
+          color: "bg-blue-300 text-blue-600",
+        },
       ],
       "Wed 23": [
-        { role: "Bartender", time: "9:00 - 5:00 p", color: "bg-blue-300" },
+        {
+          role: "Bartender",
+          time: "9:00 - 5:00 ",
+          color: "bg-blue-300 text-blue-600",
+        },
       ],
       "Thu 24": [
-        { role: "Bartender", time: "9:00 - 5:00 p", color: "bg-blue-300" },
+        {
+          role: "Bartender",
+          time: "9:00 - 5:00 ",
+          color: "bg-blue-300 text-blue-600",
+        },
       ],
     },
   },
   {
-    name: "Henry Wiling",
+    name: "Amanda ",
     hours: 32,
+    avatar: "https://cdn-icons-png.flaticon.com/256/147/147144.png", // Added avatar URL
     shifts: {
       "Mon 21": [
-        { role: "Waiter", time: "9:00 - 5:00 p", color: "bg-green-200" },
+        {
+          role: "Sous-chef",
+          time: "9:00 - 5:00 ",
+          color: "bg-purple-200 text-purple-600",
+        },
       ],
       "Tue 22": [
-        { role: "Waiter", time: "9:00 - 5:00 p", color: "bg-green-200" },
+        {
+          role: "Sous-chef",
+          time: "9:00 - 5:00 ",
+          color: "bg-purple-200 text-purple-600",
+        },
       ],
       "Wed 23": [
-        { role: "Waiter", time: "9:00 - 5:00 p", color: "bg-green-200" },
+        {
+          role: "Sous-chef",
+          time: "9:00 - 5:00 ",
+          color: "bg-purple-200 text-purple-600",
+        },
       ],
       "Thu 24": [
-        { role: "Waiter", time: "9:00 - 5:00 p", color: "bg-green-200" },
-      ],
-    },
-  },
-  {
-    name: "Amanda Johnson",
-    hours: 32,
-    shifts: {
-      "Mon 21": [
-        { role: "Sous-chef", time: "9:00 - 5:00 p", color: "bg-purple-200" },
-      ],
-      "Tue 22": [
-        { role: "Sous-chef", time: "9:00 - 5:00 p", color: "bg-purple-200" },
-      ],
-      "Wed 23": [
-        { role: "Sous-chef", time: "9:00 - 5:00 p", color: "bg-purple-200" },
-      ],
-      "Thu 24": [
-        { role: "Sous-chef", time: "9:00 - 5:00 p", color: "bg-purple-200" },
+        {
+          role: "Sous-chef",
+          time: "9:00 - 5:00 ",
+          color: "bg-purple-200 text-purple-600",
+        },
       ],
     },
   },
   {
     name: "Ella Harper",
     hours: 24,
+    avatar: "https://cdn-icons-png.flaticon.com/256/147/147144.png", // Added avatar URL
     shifts: {
-      "Mon 21": [{ role: "Chef", time: "9:00 - 5:00 p", color: "bg-blue-200" }],
-      "Tue 22": [{ role: "Chef", time: "9:00 - 5:00 p", color: "bg-blue-200" }],
-      "Wed 23": [{ role: "Chef", time: "9:00 - 5:00 p", color: "bg-blue-200" }],
+      "Mon 21": [
+        {
+          role: "Chef",
+          time: "9:00 - 5:00 ",
+          color: "bg-blue-200 text-blue-700",
+        },
+      ],
+      "Tue 22": [
+        {
+          role: "Chef",
+          time: "9:00 - 5:00 ",
+          color: "bg-blue-200 text-blue-700",
+        },
+      ],
+      "Wed 23": [
+        {
+          role: "Chef",
+          time: "9:00 - 5:00 ",
+          color: "bg-blue-200 text-blue-700",
+        },
+      ],
       "Thu 24": [
-        { role: "Chef", time: "9:00 - 12:00 p", color: "bg-blue-200" },
-        { role: "Assistant", time: "2:00 - 10:00 p", color: "bg-red-200" },
+        {
+          role: "Chef",
+          time: "9:00 - 12:00 ",
+          color: "bg-blue-200 text-blue-700",
+        },
       ],
     },
   },
   {
     name: "Mitchel Flynn",
     hours: 32,
+    avatar: "https://cdn-icons-png.flaticon.com/256/147/147144.png", // Added avatar URL
     shifts: {
-      "Mon 21": [{ role: "Cook", time: "9:00 - 5:00 p", color: "bg-pink-200" }],
-      "Tue 22": [{ role: "Cook", time: "9:00 - 5:00 p", color: "bg-pink-200" }],
-      "Wed 23": [{ role: "Cook", time: "9:00 - 5:00 p", color: "bg-pink-200" }],
-      "Thu 24": [{ role: "Cook", time: "9:00 - 5:00 p", color: "bg-pink-200" }],
+      "Mon 21": [
+        {
+          role: "Cook",
+          time: "9:00 - 5:00",
+          color: "bg-pink-200 text-pink-600",
+        },
+        {
+          role: "Cook",
+          time: "9:00 - 5:00",
+          color: "bg-pink-200 text-pink-600",
+        },
+      ],
+      "Tue 22": [
+        {
+          role: "Cook",
+          time: "9:00 - 5:00",
+          color: "bg-pink-200 text-pink-600",
+        },
+      ],
+      "Wed 23": [
+        {
+          role: "Cook",
+          time: "9:00 - 5:00",
+          color: "bg-pink-200 text-pink-600",
+        },
+      ],
+      "Thu 24": [
+        {
+          role: "Cook",
+          time: "9:00 - 5:00",
+          color: "bg-pink-200 text-pink-600",
+        },
+      ],
     },
   },
 ];
